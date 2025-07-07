@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sohne:wght@400;500;700&display=swap');
 
-$font-family: 'Inter', sans-serif;
-$bg-dark: #0d1117;
-$bg-card: rgba(22, 27, 34, 0.8);
-$border-color: rgba(255, 255, 255, 0.1);
-$text-primary: #c9d1d9;
+$font-family: 'Sohne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$bg-main: #0a0c10;
+$bg-grid: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0));
+$bg-card: rgba(24, 26, 33, 0.7);
+$border-color: rgba(138, 143, 152, 0.2);
+$text-primary: #f0f6fc;
 $text-secondary: #8b949e;
-$accent-gradient: linear-gradient(90deg, #3081f7, #00bfff);
-$radius: 10px;
-$shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+$accent-primary: #58a6ff;
+$accent-secondary: #3fb950;
+$shadow-color: rgba(0, 0, 0, 0.3);
+$radius-lg: 16px;
+$radius-md: 8px;
 
 * {
   box-sizing: border-box;
@@ -16,9 +19,14 @@ $shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-family;
-  background-color: $bg-dark;
+  background-color: $bg-main;
+  background-image: $bg-grid;
   color: $text-primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,55 +34,94 @@ body {
 
 .App {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  padding: 3rem;
-  max-width: 1800px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+  padding: 4rem;
+  max-width: 2000px;
   margin: 0 auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .container {
   background: $bg-card;
   border: 1px solid $border-color;
-  border-radius: $radius;
-  box-shadow: $shadow;
+  border-radius: $radius-lg;
+  box-shadow: 0 8px 32px $shadow-color;
   padding: 2.5rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: fadeIn 0.5s ease-out forwards;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: $radius-lg;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, $accent-primary, $accent-secondary) border-box;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) padding-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px $shadow-color;
+    border-color: rgba(88, 166, 255, 0.3);
+    &::before {
+      opacity: 1;
+    }
   }
 }
 
 .container .title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: $text-primary;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid $border-color;
-  position: relative;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 60px;
-    height: 2px;
-    background: $accent-gradient;
-  }
 }
 
-.graphic-container, .table-container {
+.graphic-container {
   width: 100%;
+  height: 100%;
 }
 
 .table-container {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
 }
 
 .data-table {
@@ -82,50 +129,55 @@ body {
   border-collapse: collapse;
 
   th, td {
-    padding: 1rem 1.25rem;
+    padding: 1.25rem 1.5rem;
     border-bottom: 1px solid $border-color;
     text-align: left;
     white-space: nowrap;
   }
 
   thead th {
-    background-color: rgba(255, 255, 255, 0.05);
-    font-size: 0.8rem;
-    font-weight: 600;
+    background-color: rgba(33, 38, 45, 0.8);
+    font-size: 0.75rem;
+    font-weight: 700;
     color: $text-secondary;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     position: sticky;
     top: 0;
-    backdrop-filter: blur(5px);
+    z-index: 10;
+    backdrop-filter: blur(8px);
   }
 
   tbody tr {
-    transition: background-color 0.2s ease;
     &:last-child td {
       border-bottom: none;
     }
     &:hover {
-      background-color: rgba(48, 129, 247, 0.1);
+      background-color: rgba($accent-primary, 0.08);
     }
+  }
+  
+  td {
+    font-size: 0.9rem;
   }
 }
 
 svg {
   font-family: $font-family;
-  overflow: visible; 
+  overflow: visible;
 
   .tick line, path.domain {
     stroke: $border-color;
+    stroke-opacity: 0.5;
   }
   .tick text {
-    fill: $text-secondary; 
-    font-size: 12px;
+    fill: $text-secondary;
+    font-size: 13px;
   }
   
-  .axis-label { 
+  .axis-label {
     fill: $text-primary;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     text-anchor: middle;
   }
@@ -135,14 +187,21 @@ svg {
   grid-column: 1 / -1;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .App {
-    grid-template-columns: 1fr;
-    padding: 2rem;
+    padding: 3rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .App {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
   .App {
     padding: 1rem;
   }
@@ -150,11 +209,14 @@ svg {
     padding: 1.5rem;
   }
   .container .title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
   .data-table {
     th, td {
-      padding: 0.75rem 1rem;
+      padding: 0.8rem 1rem;
+    }
+    td {
+      font-size: 0.85rem;
     }
   }
 }
