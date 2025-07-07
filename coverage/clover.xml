@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1751908675135" clover="3.2.0">
+  <project timestamp="1751908675135" name="All files">
+    <metrics statements="149" coveredstatements="149" conditionals="39" coveredconditionals="35" methods="39" coveredmethods="39" elements="227" coveredelements="223" complexity="0" loc="149" ncloc="149" packages="3" files="6" classes="6"/>
+    <package name="src">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="App.tsx" path="C:\Users\ASUS\Desktop\Prueba_Tecnica\test-frontend-income\src\App.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="130" coveredstatements="130" conditionals="23" coveredconditionals="19" methods="34" coveredmethods="34"/>
+      <file name="Consume.tsx" path="C:\Users\ASUS\Desktop\Prueba_Tecnica\test-frontend-income\src\components\Consume.tsx">
+        <metrics statements="41" coveredstatements="41" conditionals="8" coveredconditionals="7" methods="11" coveredmethods="11"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="24" count="250" type="stmt"/>
+        <line num="25" count="250" type="stmt"/>
+        <line num="26" count="1250" type="cond" truecount="4" falsecount="0"/>
+        <line num="27" count="750" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="750" type="stmt"/>
+        <line num="29" count="750" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="35" count="250" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="39" count="750" type="stmt"/>
+        <line num="43" count="5" type="stmt"/>
+        <line num="44" count="750" type="stmt"/>
+        <line num="45" count="750" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+        <line num="51" count="25" type="stmt"/>
+        <line num="52" count="25" type="stmt"/>
+        <line num="58" count="5" type="stmt"/>
+        <line num="68" count="5" type="stmt"/>
+        <line num="78" count="5" type="stmt"/>
+        <line num="81" count="25" type="stmt"/>
+        <line num="82" count="25" type="stmt"/>
+        <line num="86" count="25" type="stmt"/>
+        <line num="93" count="25" type="stmt"/>
+        <line num="104" count="6" type="stmt"/>
+        <line num="114" count="2" type="stmt"/>
+      </file>
+      <file name="Costs.tsx" path="C:\Users\ASUS\Desktop\Prueba_Tecnica\test-frontend-income\src\components\Costs.tsx">
+        <metrics statements="41" coveredstatements="41" conditionals="8" coveredconditionals="7" methods="11" coveredmethods="11"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="24" count="350" type="stmt"/>
+        <line num="25" count="350" type="stmt"/>
+        <line num="26" count="1750" type="cond" truecount="4" falsecount="0"/>
+        <line num="27" count="1050" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="1050" type="stmt"/>
+        <line num="29" count="1050" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="35" count="350" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="39" count="1050" type="stmt"/>
+        <line num="43" count="5" type="stmt"/>
+        <line num="44" count="1050" type="stmt"/>
+        <line num="45" count="1050" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+        <line num="51" count="25" type="stmt"/>
+        <line num="52" count="25" type="stmt"/>
+        <line num="58" count="5" type="stmt"/>
+        <line num="68" count="5" type="stmt"/>
+        <line num="78" count="5" type="stmt"/>
+        <line num="81" count="25" type="stmt"/>
+        <line num="82" count="25" type="stmt"/>
+        <line num="86" count="25" type="stmt"/>
+        <line num="93" count="25" type="stmt"/>
+        <line num="105" count="6" type="stmt"/>
+        <line num="115" count="2" type="stmt"/>
+      </file>
+      <file name="DataTable.tsx" path="C:\Users\ASUS\Desktop\Prueba_Tecnica\test-frontend-income\src\components\DataTable.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="33" count="250" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+      </file>
+      <file name="Losts.tsx" path="C:\Users\ASUS\Desktop\Prueba_Tecnica\test-frontend-income\src\components\Losts.tsx">
+        <metrics statements="41" coveredstatements="41" conditionals="7" coveredconditionals="5" methods="10" coveredmethods="10"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="24" count="25" type="cond" truecount="3" falsecount="0"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="35" count="75" type="stmt"/>
+        <line num="39" count="5" type="stmt"/>
+        <line num="43" count="5" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="51" count="15" type="stmt"/>
+        <line num="53" count="15" type="stmt"/>
+        <line num="56" count="225" type="cond" truecount="1" falsecount="1"/>
+        <line num="57" count="225" type="stmt"/>
+        <line num="58" count="225" type="stmt"/>
+        <line num="61" count="5" type="stmt"/>
+        <line num="62" count="5" type="stmt"/>
+        <line num="71" count="5" type="stmt"/>
+        <line num="72" count="5" type="stmt"/>
+        <line num="76" count="5" type="stmt"/>
+        <line num="83" count="5" type="stmt"/>
+        <line num="86" count="5" type="stmt"/>
+        <line num="87" count="15" type="stmt"/>
+        <line num="90" count="15" type="stmt"/>
+        <line num="95" count="15" type="stmt"/>
+        <line num="106" count="5" type="stmt"/>
+        <line num="116" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils.mocks">
+      <metrics statements="10" coveredstatements="10" conditionals="16" coveredconditionals="16" methods="4" coveredmethods="4"/>
+      <file name="data.mock.ts" path="C:\Users\ASUS\Desktop\Prueba_Tecnica\test-frontend-income\src\utils\mocks\data.mock.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="16" coveredconditionals="16" methods="4" coveredmethods="4"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="356" count="5" type="stmt"/>
+        <line num="849" count="5" type="stmt"/>
+        <line num="872" count="825" type="stmt"/>
+        <line num="874" count="5" type="stmt"/>
+        <line num="875" count="250" type="stmt"/>
+        <line num="876" count="15825" type="cond" truecount="2" falsecount="0"/>
+        <line num="880" count="250" type="stmt"/>
+        <line num="881" count="3225" type="cond" truecount="2" falsecount="0"/>
+        <line num="884" count="250" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
